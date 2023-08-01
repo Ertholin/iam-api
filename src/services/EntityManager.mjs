@@ -15,7 +15,9 @@ export default class EntityManager{
     }
 
 
-    create(data) {}
+    create(data) {
+        console.log('Data persisted in DB', data)
+    }
     
     update(data) {}
 

@@ -41,9 +41,10 @@ export default class NotificationManager{
         const expirationHours = this.configurationService.get('accountCreationConfirmationExpirationHours')
         const userToken = this.userTokenService.generateToken({ id }, UserTokenTypeEnum.ACCOUNT_CONFIRMATION, expirationHours)
         const link = `${this.configurationService.get('accountCreationConfirmationUrl')}?key=${userToken.uuid}`
-
+        const linkText = this.translatorService.get('link')
+        
         const object = this.translatorService.get('notification.account.creation_confirmation_object')
-        const body = this.translatorService.get('notification.account.creation.creation_confirmation_body', { link })
+        const body = this.translatorService.get('notification.account.creation.creation_confirmation_body', { link, linkText })
 
         if (email) {
             notification = new EmailNotification({ email, object, body })
@@ -60,11 +61,11 @@ export default class NotificationManager{
     }
 
     sendEmail(emailNotification) {
-
+        console.log('Notification sent via email', emailNotification)
     }
 
     sendTexto(phoneNotification){
-        
+        console.log('Notification sent via phone', phoneNotification)        
     }
 
 }

@@ -1,6 +1,7 @@
+import SingletonMixin from "../mixins/SingletonMixin.mjs"
 import NotificationManager from "./NotificationManager.mjs"
 
-export default class UserService{
+class UserService{
 
     constructor(){
         this.entityManager = EntityManager.shared
@@ -23,3 +24,7 @@ export default class UserService{
         this.entityManager.create(entity)
     }
 }
+
+Object.assign(UserService.prototype.constructor, SingletonMixin)
+
+export default UserService

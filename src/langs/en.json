@@ -1,4 +1,5 @@
 {
+    "link": "link",
     "notification.account.creation_confirmation_object": "confirm your account",
-    "notification.account.creation_confirmation_body": "Please click on this link {_link_} to confirm your account"
+    "notification.account.creation_confirmation_body": "Please click on this link <a href='{_link_}'>{_linkText_}</a> to confirm your account"
 }
