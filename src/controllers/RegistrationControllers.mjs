@@ -6,6 +6,17 @@ export default class RegistrationController{
         this.userService = UserService.shared
     }
 
+    static getInstance(){
+        return new this()
+    }
+
+    static get shared(){
+        if(!this.singleton){
+            this.singleton = this.getInstance()
+        }
+        return this.singleton
+    }
+
     register(request){
         try{
             this.userService.create(request.body)
