@@ -1,4 +1,4 @@
-export default class Response{
+export default class Request{
     constructor({ ip, body, path, query, route, params, headers, baseUrl, hostname }){
         this.ip = ip
         this.body = body
@@ -9,6 +9,5 @@ export default class Response{
         this.headers = headers
         this.baseUrl = baseUrl
         this.hostname = hostname
-
     }
 }

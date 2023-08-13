@@ -7,5 +7,7 @@ export default class Response{
     }
 
     static HTTP_CODE_CREATED = 201
+    static HTTP_CODE_NOT_FOUND = 404
+    static HTTP_CODE_METHOD_NOT_ALLOWED = 405
     static HTTP_CODE_SERVER_ERROR = 500
 }

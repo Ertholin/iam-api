@@ -1,4 +1,5 @@
 import SingletonMixin from "../mixins/SingletonMixin.mjs"
+import User from "../models/User.mjs"
 import NotificationManager from "./NotificationManager.mjs"
 
 export default class UserService{
