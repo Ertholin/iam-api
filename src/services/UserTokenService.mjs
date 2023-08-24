@@ -23,6 +23,8 @@ export default class UserTokenService{
         throw new Error(`TokenTypeEnum not exists (${tokenType})`)
        } 
        const entity = new UserToken( {id: 0, uuid: String(uuidv4()), type: tokenType, userId: user.id, expiresAt: this.futureDate(expireHours)})
+       this.entityManager.create(entity)
+       return entity
     }
 
     futureDate(hours){

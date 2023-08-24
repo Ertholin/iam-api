@@ -1,11 +1,13 @@
 import ConfigurationService from "./ConfigurationService.mjs"
+import en_us  from "../langs/en.mjs"
+
 
 export default class TranslatorService{
     constructor(){
         this.configurationService = ConfigurationService.shared
         this.locale = this.configurationService.get('i18nFallbackLocale') ?? 'en'
         this.catalogs = {
-            en: en_US
+            en: en_us 
         }
     }
 
@@ -28,9 +30,9 @@ export default class TranslatorService{
     }
 
     getTextWithParams(keyword, placeholders){
-        const text = this.getText(keyword)
+        let text = this.getText(keyword)
         Object.keys(placeholders).forEach(key =>{
-            text.replaceAll(`${key}`, placeholders[key])
+            text = text.replaceAll(`{_${key}_}`, placeholders[key])
         })
         return text
     }

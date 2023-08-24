@@ -1,16 +1,29 @@
 {
-  "name": "iam-api",
+  "name": "noowow-iam-api",
   "version": "1.0.0",
-  "description": "API for IAM",
+  "description": "Noowow Facebook messenger api",
   "main": "index.js",
   "scripts": {
     "start": "node ./src/index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noowow-community/noowow-iam-api.git"
+  },
+  "keywords": [
+    "Noowow"
+  ],
+  "author": "Noowow-community",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noowow-community/noowow-iam-api/issues"
+  },
+  "homepage": "https://github.com/noowow-community/noowow-iam-api#readme",
   "dependencies": {
     "dotenv": "^16.3.1",
+    "knex": "^2.5.1",
+    "mysql": "^2.18.1",
     "uuid": "^9.0.0"
   }
 }

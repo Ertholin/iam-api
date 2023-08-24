@@ -1,6 +1,7 @@
-import SingletonMixin from "../mixins/SingletonMixin.mjs"
+// import SingletonMixin from "../mixins/SingletonMixin.mjs"
 import User from "../models/User.mjs"
 import NotificationManager from "./NotificationManager.mjs"
+import EntityManager from "./EntityManager.mjs"
 
 export default class UserService{
 
@@ -23,6 +24,7 @@ export default class UserService{
     create(data){
         const entity = new User(data)
         this.entityManager.create(entity)
+        this.notificationManager.sendConfirmationLink(entity)
     }
 }
 

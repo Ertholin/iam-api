@@ -8,7 +8,7 @@ export default [
             {
                 method: POST,
                 path: '/register',
-                controller: RegistrationController.register,
+                controller: (req) => RegistrationController.shared.register(req),
                 middleware: null
             }
         ]

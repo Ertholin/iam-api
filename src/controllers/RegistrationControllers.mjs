@@ -25,7 +25,6 @@ export default class RegistrationController{
             console.log('An error has occured', error)
             return new Response({ statusCode: Response.HTTP_CODE_SERVER_ERROR })
         }
-        return null
     }
 
 }
