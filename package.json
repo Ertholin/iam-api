@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./src/index.mjs",
+    "noowow": "node ./src/core/cli/index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
