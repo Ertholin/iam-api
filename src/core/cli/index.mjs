@@ -1,9 +1,6 @@
 import 'dotenv/config'
-import DatabaseCommand from "./DatabaseCommand.mjs";
 
-const commands = {
-    migrate: () => DatabaseCommand.shared.makeMigration()
-}
+const commands = {}
 
 if (process.argv.length === 2) {
     console.error('Expected at least one argument!');
